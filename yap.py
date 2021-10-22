@@ -22,6 +22,14 @@ camera.framerate = 15
 def takePicture():
     camera.capture("testAWB.jpg", )
     camera.stop_preview()
+    img = PhotoImage(file='testAWB.jpg')
+
+    logoo = Label(
+      master,
+      image=img
+    )
+
+    logoo.place(x=640, y=50)
 
 def cikis():
    exit()
