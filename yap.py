@@ -21,8 +21,10 @@ def takePicture():
     camera.capture("testAWB.png", )
     camera.stop_preview()
     imgg = PhotoImage(file='testAWB.png')
+    logoo.configure(image=imgg)
     logoo.image = imgg
     master.update_idletasks()
+
    
 
  
@@ -75,7 +77,7 @@ btn = Button(master, text="Kaydet", command = takePicture ,height =5,
 btn.place(x=640, y=150)
 
 
-
+master.bind("<Return>", takePicture)
 master.bind("<Configure>", repos)
 master.bind("<Return>", mode)
 btnn = Button(master, text="Cikis", command = cikis,height =5, 
