@@ -17,19 +17,15 @@ camera.framerate = 15
 #camera.drc_strength = "high"
 camera.start_preview(fullscreen=False,resolution=(640,480),window=(0,0,640,480))    
 
-
-   
 def takePicture():
     camera.capture("testAWB.png", )
     camera.stop_preview()
-    img = PhotoImage(file='testAWB.png')
+    imgg = PhotoImage(file='testAWB.png')
+    logoo.image = imgg
+    master.update_idletasks()
+   
 
-    logoo = Label(
-      master,
-      image=img
-    )
-
-    logoo.place(x=0, y=0)
+ 
 
 def cikis():
    exit()
@@ -60,6 +56,11 @@ previewX = master.winfo_x()
 previewY = master.winfo_y()
 
 
+logoo = Label(
+      master
+    
+    )
+logoo.place(x=0, y=0)
 img = PhotoImage(file='logo.png')
 
 logo = Label(
