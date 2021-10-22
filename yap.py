@@ -29,7 +29,7 @@ def takePicture():
       image=img
     )
 
-    logoo.place(x=640, y=50)
+    logoo.place(x=0, y=0)
 
 def cikis():
    exit()
@@ -60,7 +60,6 @@ master.configure(background='black')
 previewX = master.winfo_x()
 previewY = master.winfo_y()
 
-camera.start_preview(fullscreen=False,window=(previewX+75,previewY+350,800,600))
 
 img = PhotoImage(file='logo.png')
 
