@@ -20,9 +20,9 @@ camera.framerate = 15
 
    
 def takePicture():
-    camera.capture("testAWB.jpg", )
+    camera.capture("testAWB.png", )
     camera.stop_preview()
-    img = PhotoImage(file='testAWB.jpg')
+    img = PhotoImage(file='testAWB.png')
 
     logoo = Label(
       master,
