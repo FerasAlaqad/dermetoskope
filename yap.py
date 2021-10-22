@@ -15,7 +15,7 @@ camera.resolution = (800, 600)
 camera.framerate = 15
 #camera.shutter_speed = camera.exposure_speed
 #camera.drc_strength = "high"
-
+camera.start_preview(fullscreen=False,resolution=(640,480),window=(0,0,640,480))    
 
 
    
@@ -41,7 +41,6 @@ def takeYuvPicture():
 def repos(val):
     previewX = master.winfo_x()
     previewY = master.winfo_y()    
-    camera.start_preview(fullscreen=False,resolution=(640,480),window=(0,0,640,480))    
 
 def exposure():
         camera.exposure_mode=exposureMode.get().lower()
